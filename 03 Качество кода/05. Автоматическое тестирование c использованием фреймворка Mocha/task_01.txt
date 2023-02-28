@@ -1,0 +1,23 @@
+
+ЧТО НЕ ТАК С ЭТИМ ТЕСТОМ?
+
+Что не так в нижеприведённом тесте функции pow?
+
+it("Возводит x в степень n", function() {
+  let x = 5;
+
+  let result = x;
+  assert.equal(pow(x, 1), result);
+
+  result *= x;
+  assert.equal(pow(x, 2), result);
+
+  result *= x;
+  assert.equal(pow(x, 3), result);
+});
+
+
+
+ОТВЕТ:
+
+Код рабочий, но лучше it блок разделить на три части и обернуть в блок describe, реализовано в task_01.html

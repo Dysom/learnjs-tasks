@@ -1,0 +1,21 @@
+
+СЛУЧАЙНОЕ ЦЕЛОЕ ЧИСЛО ОТ MIN ДО MAX
+
+Напишите функцию randomInteger(min, max), которая генерирует случайное целое (integer) число от min до max (включительно).
+
+Любое число из интервала min..max должно появляться с одинаковой вероятностью.
+
+Пример работы функции:
+
+alert( randomInteger(1, 5) ); // 1
+alert( randomInteger(1, 5) ); // 3
+alert( randomInteger(1, 5) ); // 5
+
+
+
+ОТВЕТ:
+
+function randomInteger(minValue, maxValue) {
+
+    return Math.round(minValue - 0.5 + Math.random() * (maxValue - minValue + 1));
+}

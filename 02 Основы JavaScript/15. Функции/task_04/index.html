@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let number = +prompt('Введите число', 1);
+        let degree = +prompt('Введите степень', 1);
+
+        if (degree < 1) {
+            alert('Степень "' + degree + '" не поддерживается');
+        }
+        else {
+            alert(pow(number, degree));
+        }
+
+        function pow(x, n) {
+            if (n === 1) {
+                return x;
+            }
+
+            if (n % 2) {
+                let value = pow(x, (n - 1) / 2);
+
+                return value * value * x;
+            }
+            else {
+                let value = pow(x, n / 2);
+
+                return value * value;
+            }
+        }
+
+        // let tD = Date.now();
+
+        // for (let i = 1; i <= 15; i++) {
+        //     for (let j = 1; j <= 15; j++) {
+        //         if (pow(i, j) !== i ** j) {
+        //             console.log(pow(i, j), ' !== ', i ** j);
+        //         }
+        //     }
+        // }
+
+        // console.log('test duration:', Date.now() - tD, 'ms');
+    </script>
+</body>
+
+</html>
